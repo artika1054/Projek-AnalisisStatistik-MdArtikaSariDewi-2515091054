@@ -58,9 +58,7 @@ Di bagian ini, mahasiswa diharapkan untuk menyajikan dan menginterpretasikan has
 - Sementara itu, pada variabel **tingkat churn**, diperoleh nilai mean sebesar -14.79, median -14.39, dan modus 13.55. Nilai mean dan median yang relatif berdekatan menunjukkan bahwa secara umum tingkat churn pelanggan berada pada kisaran yang **relatif stabil**. Perbedaan tanda antara nilai modus dan nilai rata-rata mengindikasikan adanya variasi perilaku churn di antara pelanggan, yang dapat dipengaruhi oleh perbedaan karakteristik atau segmen pelanggan tertentu.
 
 - **Ukuran Sebaran (Standar Deviasi, Range, Kuartil):**
-  - - ### Tabel Ukuran Sebaran
-    - ### Tabel 5.2 Ukuran Sebaran dan Kuartil Variabel Penelitian
-
+ - ### Tabel Ukuran Sebaran
 | Variabel                             | Std. Dev | Min   | Q1      | Median  | Q3      |  Max    |
 |--------------------------------------|----------|-------|---------|---------|---------|---------|
 | Pendapatan Tahunan                   | 2064.93  | 10.00 | 893.80  | 2756.50 | 4706.20 | 6689.00 |
@@ -74,25 +72,39 @@ Di bagian ini, mahasiswa diharapkan untuk menyajikan dan menginterpretasikan has
 - Untuk variabel **nilai pelanggan**, nilai standar deviasi sebesar 6284.27 menunjukkan tingkat variasi data yang sangat tinggi. Rentang nilai yang luas, yaitu dari 134.00 hingga 20546.00, mengindikasikan perbedaan nilai pelanggan yang signifikan. Nilai kuartil pertama (Q1) sebesar 3006.50 dan kuartil ketiga (Q3) sebesar 14614.25 menunjukkan bahwa 50% pelanggan memiliki nilai pelanggan pada rentang tersebut, yang menandakan adanya kelompok pelanggan bernilai tinggi yang memengaruhi distribusi data.
 - Sementara itu, pada variabel **tingkat churn**, nilai standar deviasi sebesar 20.02 menunjukkan adanya variasi perilaku pelanggan yang cukup besar. Rentang nilai antara -50.03 hingga 15.78 mengindikasikan perbedaan tingkat churn yang mencolok antar pelanggan. Nilai kuartil pertama (Q1) sebesar -32.21 dan kuartil ketiga (Q3) sebesar 3.43 menunjukkan bahwa sebagian besar nilai churn berada pada kisaran tersebut. Secara keseluruhan, sebaran data tingkat churn mencerminkan adanya perbedaan pola retensi pelanggan di dalam dataset.
 - **Visualisasi (Histogram/Boxplot):**
-  - *Sematkan gambar plot dari folder /results...*
-  - *Interpretasi:* Jelaskan wawasan apa yang Anda dapatkan dari bentuk distribusi data.
+  - ### Histogram Pendapatan Tahunan (Miliar IDR)
+![Histogram Pendapatan Tahunan](results/histogram_Pendapatan_Tahunan_Miliar_IDR.png)
+  - *Interpretasi:*
+    Berdasarkan **histogram Pendapatan Tahunan** (dalam miliar IDR), distribusi data terlihat cenderung miring ke kanan. Hal ini menunjukkan bahwa sebagian besar perusahaan memiliki pendapatan tahunan dengan nilai rendah hingga menengah, sementara itu hanya sebagian kacil perusahaan yang memiliki pendapatan yang sangat kecil. Garis merah putus - putus pada histogram menunjukkan nilai mean ebesar 2908,16 miliar IDR berada lebih ke kanan dari konsentrasi data, yang mengindikasikan adanya pengaruh nilai pendapatan tinggi terhadapt rata - rata. Sebaran data yang cukup lebar menandakan bahwa adanya variasi tahunan yang tinggi antar perusahaan. Sehingga pada variabel pendapatan tahunan digunakan sebagai variabel utama dalam analisis statistik deskriptif, karena mampu merepresentasikan karakteristik distribusi dan sebaran data secara jelas.
 
 ### 5.2. Uji Normalitas
-- **Hasil Uji Shapiro-Wilk:**
-  - *Nilai p-value...*
-  - *Interpretasi:* Apakah data Anda terdistribusi normal berdasarkan hasil uji? Apa implikasinya?
-- **Plot Q-Q:**
-  - *Sematkan gambar plot dari folder /results...*
-  - *Interpretasi:* Apakah titik-titik data mengikuti garis lurus? Apa artinya?
+- Tabel Ringkasan Hasil Uji Shapiro-Wilk:
+| Variabel           | Statistik Uji    | Nilai   | p-value | Keputusan    |
+| ------------------ | ---------------- | ------- | ------- | ------------ |
+| Pendapatan Tahunan | Shapiro–Wilk (W) | 0.92753 | < 0.05  | Tidak normal |
+| Nilai Pelanggan    | Shapiro–Wilk (W) | 0.92792 | < 0.05  | Tidak normal |
+| Tingkat Churn (%)  | Shapiro–Wilk (W) | 0.94267 | < 0.05  | Tidak normal |
 
+  - *Interpretasi:*
+   Berdasarkan hasil uji Shapiro–Wilk, seluruh variabel yang dianalisis, yaitu Pendapatan Tahunan, Nilai Pelanggan, dan Tingkat Churn, memiliki nilai p-value ≤ 0,05. Hal ini menunjukkan bahwa ketiga variabel tersebut tidak terdistribusi normal. Oleh karena itu, analisis hubungan antar variabel dilakukan menggunakan metode non-parametrik, yaitu korelasi Spearman, yang tidak mensyaratkan asumsi normalitas data.
+- **Plot Q-Q:**
+  - ![Q–Q Plot Pendapatan Tahunan](results/qqplot_Pendapatan_Tahunan_Miliar_IDR.png)
+  - *Interpretasi:*
+- Titik-titik data tidak mengikuti garis lurus diagonal (garis merah) secara konsisten.
+- Pada bagian kuantil rendah dan kuantil tinggi, titik-titik terlihat menyimpang cukup jauh dari garis normal.
+- Pola lengkungan (tidak linear) menunjukkan bahwa distribusi data tidak simetris dan cenderung tidak normal.
+Berdasarkan Q–Q plot, data Pendapatan Tahunan tidak terdistribusi normal, karena titik-titik data tidak mengikuti garis distribusi normal.
 ### 5.3. Analisis Korelasi
 - **Nilai Koefisien Korelasi:**
-  - *Nilai r...*
-  - *Interpretasi:* Seberapa kuat dan apa arah hubungan antara dua variabel yang Anda uji? (misalnya, korelasi positif kuat, negatif lemah, atau tidak ada korelasi).
+  - Metode korelasi: Spearman
+Koefisien korelasi (ρ): 0.706
+p-value: < 0.05
+  - *Interpretasi:*
+Berdasarkan hasil analisis korelasi menggunakan **metode Spearman**, diperoleh nilai koefisien korelasi (ρ) sebesar 0,706 dengan nilai p-value < 0,05. Hasil ini menunjukkan bahwa terdapat hubungan yang positif dan kuat antara Pendapatan Tahunan dan Nilai Pelanggan. Artinya, peningkatan pendapatan tahunan cenderung diikuti oleh peningkatan nilai pelanggan. Hubungan tersebut bersifat signifikan secara statistik, sehingga dapat disimpulkan bahwa pendapatan tahunan memiliki keterkaitan yang bermakna dengan nilai pelanggan dalam data yang dianalisis.
 - **Visualisasi (Scatter Plot):**
-  - *Sematkan gambar plot dari folder /results...*
-  - *Interpretasi:* Apakah pola pada scatter plot mendukung hasil koefisien korelasi?
-
+  - ![Scatter Plot Pendapatan Tahunan vs Nilai Pelanggan](results/scatterplot_Pendapatan_Tahunan_Miliar_IDR_vs_Nilai_Pelanggan_Juta_IDR.png)
+  - *Interpretasi:*
+Pola sebaran pada scatter plot menunjukkan kecenderungan hubungan positif antara Pendapatan Tahunan dan Nilai Pelanggan. Meskipun data tidak sepenuhnya membentuk hubungan linear yang sempurna dan terdapat variasi serta outlier, arah tren yang meningkat secara konsisten mendukung hasil koefisien korelasi Spearman sebesar 0,706 yang menunjukkan hubungan positif dan kuat.
 ### 5.4. Analisis Regresi
 - **Model Regresi:**
   - *Persamaan regresi: Y = b0 + b1*X*
