@@ -78,7 +78,7 @@ Di bagian ini, mahasiswa diharapkan untuk menyajikan dan menginterpretasikan has
  - Berdasarkan **histogram Pendapatan Tahunan** (dalam miliar IDR), distribusi data terlihat cenderung miring ke kanan. Hal ini menunjukkan bahwa sebagian besar perusahaan memiliki pendapatan tahunan dengan nilai rendah hingga menengah, sementara itu hanya sebagian kacil perusahaan yang memiliki pendapatan yang sangat kecil. Garis merah putus - putus pada histogram menunjukkan nilai mean ebesar 2908,16 miliar IDR berada lebih ke kanan dari konsentrasi data, yang mengindikasikan adanya pengaruh nilai pendapatan tinggi terhadapt rata - rata. Sebaran data yang cukup lebar menandakan bahwa adanya variasi tahunan yang tinggi antar perusahaan. Sehingga pada variabel pendapatan tahunan digunakan sebagai variabel utama dalam analisis statistik deskriptif, karena mampu merepresentasikan karakteristik distribusi dan sebaran data secara jelas.
  - 
     - ### Boxplot Pendapatan Tahunan (Miliar IDR)
-![Boxplot Pendapatan Tahunan](results/boxplot_Pendapatan_Tahunan_Miliar_IDR)
+![Boxplot Pendapatan Tahunan](results/boxplot_Pendapatan_Tahunan_Miliar_IDR.png)
 **Intepretasi:**
 - Berdasarkan boxplot, dapat diketahui bahwa pendapatan tahunan memiliki variasi data yang cukup besar. Nilai minimum pendapatan tercatat sebesar 10 miliar IDR, sedangkan nilai maksimum mencapai 6.689 miliar IDR, menunjukkan **rentang data yang sangat lebar**.
 - Median pendapatan tahunan berada pada nilai 2.756,50 miliar IDR, yang berarti separuh dari observasi memiliki pendapatan di bawah nilai tersebut dan separuh lainnya di atasnya. Kuartil bawah (Q1) sebesar 893,80 miliar IDR dan kuartil atas (Q3) sebesar 4.706,20 miliar IDR, sehingga rentang antar **kuartil (IQR) tergolong besar**. Hal ini mengindikasikan bahwa sebaran pendapatan antar objek pengamatan cukup heterogen. Posisi median yang relatif lebih dekat ke kuartil bawah serta whisker atas yang lebih panjang dibandingkan whisker bawah menunjukkan bahwa distribusi data cenderung miring ke kanan (positively skewed). Artinya, terdapat beberapa nilai pendapatan yang sangat tinggi yang menarik distribusi ke arah kanan.
@@ -102,7 +102,7 @@ Keputusan : Tidak terdistribusi normal
   - **Interpretasi:**
    Berdasarkan hasil uji Shapiro–Wilk, seluruh variabel yang dianalisis, yaitu Pendapatan Tahunan, Nilai Pelanggan, dan Tingkat Churn, memiliki nilai p-value ≤ 0,05. Hal ini menunjukkan bahwa ketiga variabel tersebut tidak terdistribusi normal. Oleh karena itu, analisis hubungan antar variabel dilakukan menggunakan metode non-parametrik, yaitu korelasi Spearman, yang tidak mensyaratkan asumsi normalitas data.
 - **Plot Q-Q:**
-  - ![Q–Q Plot Pendapatan Tahunan](output/results/qqplot_Pendapatan_Tahunan_Miliar_IDR.png)
+  - ![Q–Q Plot Pendapatan Tahunan](results/qqplot_Pendapatan_Tahunan_Miliar_IDR.png)
   - *Interpretasi:*
 - Titik-titik data tidak mengikuti garis lurus diagonal (garis merah) secara konsisten.
 - Pada bagian kuantil rendah dan kuantil tinggi, titik-titik terlihat menyimpang cukup jauh dari garis normal.
@@ -135,7 +135,7 @@ Nilai_Pelanggan_Juta_IDR (b₂) = -0,001564
 - *Persamaan regresi:*
 - Tingkat Churn (%) = 13,87 − 0,004967(Pendapatan Tahunan) − 0,001564(Nilai Pelanggan)
   - **Interpretasi:**
-   Berdasarkan hasil **Analisis Regresi Berganda** dengan variabel dependen **Tingkat_Churn_Persen** serta variabel independen **Pendapatan_Tahunan_Miliar_IDR** dan **Nilia_Pelanggan_Juta_IDR**, diperoleh intepretasi koefisien sebagai berikut:
+   Berdasarkan hasil **Analisis Regresi Berganda** dengan variabel dependen **Tingkat_Churn_Persen** serta variabel independen **Pendapatan_Tahunan_Miliar_IDR** dan **Nilai_Pelanggan_Juta_IDR**, diperoleh intepretasi koefisien sebagai berikut:
 - **Intercept (b0)**
 Nilai intercept (b0) sebesar **13,87** menunjukkan bahwa ketika pendapatan tahunan dan nilai pelanggan bernilai nol (0), maka tingkat churn pelanggan diperkirakan sebesar **13,87%**. Nilai ini merupakan titik awal model dan bersifat teoritis, karena dalam praktik kondisi seluruh variabel independen bernilai nol jarang terjadi
 - **Slope (b1) - Pendapatan Tahunan**
@@ -155,7 +155,7 @@ Sementara itu,**13,1% variasi sisanya dijelaskan oleh faktor lain di luar model 
 - Tingkat_Churn_Persen dan Nilai_Pelanggan_Juta_IDR  
 Selain itu, digunakan pula **Added-Variable Plots (AVPlots)** untuk mengevaluasi **pengaruh parsial** masing-masing variabel independen dalam model regresi linear berganda.
   - **Gambar 1 Plot Tingkat_Churn_Persen dan Pendapatan_Tahunan_Miliar_IDR**
- - ![Plot Regresi Pendapatan Tahunan vs Tingkat Churn](results/plot_regresi_Pendapatan_Tahunan_Miliar_IDR_vs_Tingkat_Churn_Persen.png)
+ - ![Plot Regresi Pendapatan Tahunan vs Tingkat Churn](results/plot_regresi_Pendapatan_Tahunan_Miliar_IDR_vs_Tingkat_Churn_Persenn.png)
  - **Intepretasi: Plot Tingkat_Churn_Persen dan Pendapatan_Tahunan_Miliar_IDR**
  Plot regresi linear ini menunjukkan hubungan antara Pendapatan Tahunan (dalam miliar IDR) dengan Tingkat Churn (dalam persen). Titik-titik biru pada grafik merepresentasikan data aktual, sedangkan garis merah menunjukkan garis regresi linear yang menggambarkan tren hubungan antara kedua variabel tersebut.
 Berdasarkan grafik, terlihat bahwa garis regresi memiliki kemiringan negatif, yang berarti terdapat hubungan terbalik antara pendapatan tahunan dan tingkat churn. Dengan kata lain, semakin tinggi pendapatan tahunan, maka tingkat churn cenderung semakin rendah. Hal ini menunjukkan bahwa entitas dengan pendapatan yang lebih besar memiliki kecenderungan lebih kecil untuk kehilangan pelanggan.
@@ -163,7 +163,8 @@ Nilai Adjusted R-squared sebesar 0,869 menunjukkan bahwa sekitar 86,9% variasi t
 Secara keseluruhan, grafik ini mengindikasikan bahwa pendapatan tahunan merupakan faktor yang berpengaruh signifikan terhadap tingkat churn, meskipun faktor lain di luar model tetap mungkin memengaruhi nilai churn.
  - **Gambar 2 Plot Tingkat_Churn_Persen dan Nilai_Pelanggan_Juta_IDR**
 - ![Plot Regresi Nilai Pelanggan vs Tingkat Churn](results/scatterplot_Nilai_Pelanggan_Juta_IDR_vs_Tingkat_Churn_Persen.png)
-  c
+
+- **Intepretasi:**
   Plot regresi linear ini menunjukkan hubungan antara Nilai Pelanggan (dalam juta IDR) dengan Tingkat Churn (dalam persen). Titik-titik pada grafik merepresentasikan data aktual, sedangkan garis regresi menunjukkan arah dan pola hubungan linear antara kedua variabel tersebut.
 Dari grafik terlihat bahwa garis regresi memiliki kemiringan negatif, yang menandakan adanya hubungan terbalik antara nilai pelanggan dan tingkat churn. Artinya, semakin tinggi nilai pelanggan, maka tingkat churn cenderung semakin rendah. Pelanggan dengan nilai yang lebih besar cenderung lebih loyal dan tidak mudah berhenti.
 Nilai Adjusted R-squared sebesar 0,869 menunjukkan bahwa sekitar 86,9% variasi tingkat churn dapat dijelaskan oleh variabel nilai pelanggan. Nilai ini tergolong tinggi, sehingga model regresi yang digunakan memiliki kemampuan yang baik dalam menjelaskan hubungan antara nilai pelanggan dan churn.
@@ -173,7 +174,7 @@ Meskipun terdapat beberapa data yang menyebar cukup jauh dari garis regresi, pol
 ![AVPlots Regresi Churn](results/avplots_regresi_churn.png)
 AVPlots digunakan untuk mengevaluasi pengaruh parsial masing-masing variabel independen terhadap Tingkat_Churn_Persen.
 
-- **Interpretasi : avPots**
+- **Interpretasi : avPlots**
 Added Variable Plot (AV Plot) ini digunakan untuk melihat pengaruh masing-masing variabel independen terhadap tingkat churn, dengan asumsi variabel independen lainnya sudah dikendalikan (dianggap konstan). Pada grafik ini terdapat dua plot, yaitu untuk Pendapatan Tahunan dan Nilai Pelanggan.
 **1. AV Plot Pendapatan Tahunan**
 Plot sebelah kiri menunjukkan hubungan antara Pendapatan Tahunan (setelah mengontrol variabel lain) dengan Tingkat Churn. Terlihat bahwa garis tren memiliki kemiringan negatif, yang berarti bahwa ketika pendapatan tahunan meningkat, tingkat churn cenderung menurun, meskipun pengaruh variabel lain telah diperhitungkan.
