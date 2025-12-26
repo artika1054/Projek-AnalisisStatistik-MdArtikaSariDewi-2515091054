@@ -155,14 +155,14 @@ Sementara itu,**13,1% variasi sisanya dijelaskan oleh faktor lain di luar model 
 - Tingkat_Churn_Persen dan Nilai_Pelanggan_Juta_IDR  
 Selain itu, digunakan pula **Added-Variable Plots (AVPlots)** untuk mengevaluasi **pengaruh parsial** masing-masing variabel independen dalam model regresi linear berganda.
   - **Gambar 1 Plot Tingkat_Churn_Persen dan Pendapatan_Tahunan_Miliar_IDR**
- - ![Plot Regresi Pendapatan Tahunan vs Tingkat Churn](results/plot_regresi_Pendapatan_Tahunan_Miliar_IDR_vs_Tingkat_Churn_Persenn.png)
+ - ![Plot Regresi Pendapatan Tahunan vs Tingkat Churn](results/plot_regresi_Pendapatan_Tahunan_Miliar_IDR_vs_Tingkat_Churn_Persen.png)
  - **Intepretasi: Plot Tingkat_Churn_Persen dan Pendapatan_Tahunan_Miliar_IDR**
  Plot regresi linear ini menunjukkan hubungan antara Pendapatan Tahunan (dalam miliar IDR) dengan Tingkat Churn (dalam persen). Titik-titik biru pada grafik merepresentasikan data aktual, sedangkan garis merah menunjukkan garis regresi linear yang menggambarkan tren hubungan antara kedua variabel tersebut.
 Berdasarkan grafik, terlihat bahwa garis regresi memiliki kemiringan negatif, yang berarti terdapat hubungan terbalik antara pendapatan tahunan dan tingkat churn. Dengan kata lain, semakin tinggi pendapatan tahunan, maka tingkat churn cenderung semakin rendah. Hal ini menunjukkan bahwa entitas dengan pendapatan yang lebih besar memiliki kecenderungan lebih kecil untuk kehilangan pelanggan.
 Nilai Adjusted R-squared sebesar 0,869 menunjukkan bahwa sekitar 86,9% variasi tingkat churn dapat dijelaskan oleh variabel pendapatan tahunan. Nilai ini tergolong tinggi, sehingga model regresi yang digunakan dapat dikatakan cukup baik dan kuat dalam menjelaskan hubungan antara pendapatan dan churn.
 Secara keseluruhan, grafik ini mengindikasikan bahwa pendapatan tahunan merupakan faktor yang berpengaruh signifikan terhadap tingkat churn, meskipun faktor lain di luar model tetap mungkin memengaruhi nilai churn.
  - **Gambar 2 Plot Tingkat_Churn_Persen dan Nilai_Pelanggan_Juta_IDR**
-- ![Plot Regresi Nilai Pelanggan vs Tingkat Churn](results/scatterplot_Nilai_Pelanggan_Juta_IDR_vs_Tingkat_Churn_Persen.png)
+- ![Plot Regresi Nilai Pelanggan vs Tingkat Churn](results/plot_regresi_Nilai_Pelanggan_Juta_IDR_vs_Tingkat_Churn_Persen.png)
 
 - **Intepretasi:**
   Plot regresi linear ini menunjukkan hubungan antara Nilai Pelanggan (dalam juta IDR) dengan Tingkat Churn (dalam persen). Titik-titik pada grafik merepresentasikan data aktual, sedangkan garis regresi menunjukkan arah dan pola hubungan linear antara kedua variabel tersebut.
