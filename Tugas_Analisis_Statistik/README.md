@@ -102,7 +102,7 @@ Keputusan : Tidak terdistribusi normal
   - **Interpretasi:**
    Berdasarkan hasil uji Shapiro–Wilk, seluruh variabel yang dianalisis, yaitu Pendapatan Tahunan, Nilai Pelanggan, dan Tingkat Churn, memiliki nilai p-value ≤ 0,05. Hal ini menunjukkan bahwa ketiga variabel tersebut tidak terdistribusi normal. Oleh karena itu, analisis hubungan antar variabel dilakukan menggunakan metode non-parametrik, yaitu korelasi Spearman, yang tidak mensyaratkan asumsi normalitas data.
 - **Plot Q-Q:**
-  - ![Q–Q Plot Pendapatan Tahunan](results/qqplot_Pendapatan_Tahunan_Miliar_IDR.png)
+  - ![Q–Q Plot Pendapatan Tahunan](output/results/qqplot_Pendapatan_Tahunan_Miliar_IDR.png)
   - *Interpretasi:*
 - Titik-titik data tidak mengikuti garis lurus diagonal (garis merah) secara konsisten.
 - Pada bagian kuantil rendah dan kuantil tinggi, titik-titik terlihat menyimpang cukup jauh dari garis normal.
