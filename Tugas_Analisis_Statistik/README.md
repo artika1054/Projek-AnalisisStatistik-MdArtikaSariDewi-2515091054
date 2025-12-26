@@ -193,15 +193,15 @@ Pola titik yang cukup konsisten dengan garis tren menandakan bahwa nilai pelangg
 - Pendapatan tahunan, biaya akuisisi dan nilai pelanggan menunjukkan distribusi data yang **bervariasi tinggi**, dengan sebagian nilai ekstrem yang memengaruhi rata - rata
 - Tingkat churn pelanggan bervariasi, namun secara umum berada pada kisaran yang relatif stabil
 - Histogram dan boxplot membantu memvisualisasikan sebaran data, distribusi miring dan variasi antar pelanggan
- - **Uji Normalitas**
+ - **2. Uji Normalitas**
 Semua variabel utama (Pendapatan Tahunan, Nilai Pelanggan, dan Tingkat Churn) **tidak terdistribusi normal**, sehingga analisis korelasi dilakukan menggunakan metode **Spearman** yang non-parametrik
- - **Analisis Korelasi**
+ - **3. Analisis Korelasi**
 Terdapat hubungan **positif dan kuat** antara Pendapatan Tahunan dan Nilai pelanggan (ρ = 0,706, p < 0,05), menunjukkan bahwa peningkatan pendapatan tahunan cenderung diikuti oleh peningkatan nilai pelanggan
- - **Nilai Regresi Berganda**
+ - **4. Nilai Regresi Berganda**
 - Model regresi menunjukkan bahwa **Pendapatan Tahunan** dan **Nilai Pelanggan** memiliki pengaruh negatif terhadap tingkat churn. Artinya, semakin tinggi pendapatan atau nilai pelanggan, semakin rendah kemungkinan churn
 - Adjusted R-squared sebesar **89,9%** menunjukkan bahwa model mampu menjelaskan sebagian besar variasi tingkat churn
 - AVPlots menegaskan bahwa kedua variabel independen memberikan kontribusi signifikan secara persial terhadapt perubahan tingkat churn
-   - **Wawasan dari saya**
+ - **Tambahan**
   Analisis ini menekankan pentingnya mengombinasikan **statistik deskriptif, visualisasi** dan **analisis hubungan antar variabel** agar hasil penelitian lebih mudah dipahami dan dapat digunakan sebagai dasar untuk pengambilan keputusan. Dan, kemampuan dalam mebuat plot (histogram, boxplot, scatter plot) sekaligus mengintepretasikan hasil statistik menjadi kunci untuk memahami data secara menyeluruh.
 
- terimakasi, gomawo:)
+ terimakasi:)
