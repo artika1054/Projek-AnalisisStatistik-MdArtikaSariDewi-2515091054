@@ -11,7 +11,7 @@
 
 ## 2. Deskripsi Proyek
 Projek ini menggunakan dataset pelanggan yang memuat informasi menganai karakteristik ekonomi dan nilai pelanggan. Dataset tersebut mencakup beberapa variabel utama, yaitu Pendapatan Tahunan, Nilai Pelanggan, dan Tingkat Churn
-Analisis diawali dengan statistik deskriptif untuk memggambarkan karakteristik data, meliputi perhitungan mean, median, modus serta sebaran data pada setiap variabel. Selanjutnya, dilakukan analisis korelasi untuk menguji hubungan antara Pendapatan Tahunan dan Nilai Pelanggan. Pada tahap akhir, digunakan analisis regresi untuk menganalisis pengaruh Pendapatan Tahunan dan Tingkat Churn terhadap Nilai Pelanggan
+Analisis diawali dengan statistik deskriptif untuk menggambarkan karakteristik data, meliputi perhitungan mean, median, modus serta sebaran data pada setiap variabel. Selanjutnya, dilakukan analisis korelasi untuk menguji hubungan antara Pendapatan Tahunan dan Nilai Pelanggan. Pada tahap akhir, digunakan analisis regresi untuk menganalisis pengaruh Pendapatan Tahunan dan Tingkat Churn terhadap Nilai Pelanggan
 
 ---
 
@@ -43,36 +43,37 @@ Di bagian ini, mahasiswa diharapkan untuk menyajikan dan menginterpretasikan has
 
 ### 5.1. Statistik Deskriptif
 - **Ukuran Pemusatan (Mean, Median, Modus):**
-  - ### Tabel Statistik Deskriptif
+### Tabel Statistik Deskriptif
 | Variabel                             |    Mean     |    Median   |    Modus   |
 |--------------------------------------|-------------|-------------|------------|
-| Pendapatan Tahunan                   | 2908.16     | 2756.50     | 187.00     |
-| Biaya Akuisisi Pelanggan (Juta IDR)  | 3050.53     | 2911.50     | 321.00     |
-| Nilai Pelanggan (Juta IDR)           | 9098.98     | 8682.50     | 1011.00    |
+| Pendapatan Tahunan (Miliar IDR)      | 31.88       | 31.3        | 1.87       |
+| Biaya Akuisisi Pelanggan (Juta IDR)  | 33.50       | 33.08       | 3.21       |
+| Nilai Pelanggan (Juta IDR)           | 100.02      | 98.71       | 10.11      |
 | Tingkat Churn (%)                    | -14.79      | -14.39      | 13.55      |
 
 **Interpretasi:**
-  - Berdasarkan hasil statistik deskriptif, rata-rata **pendapatan tahunan** pelanggan sebesar 2908.16 dengan nilai median 2756.50 dan modus 187.00. Nilai mean yang lebih besar dibandingkan median menunjukkan bahwa distribusi pendapatan tahunan cenderung **miring ke kanan**, yang mengindikasikan adanya sebagian kecil pelanggan dengan pendapatan yang relatif lebih tinggi. Perbedaan nilai modus yang cukup jauh dari mean dan median menunjukkan bahwa sebagian besar pelanggan memiliki pendapatan pada tingkat yang lebih rendah dibandingkan rata-ratanya.
-- Pada variabel **biaya akuisisi pelanggan**, diperoleh nilai rata-rata sebesar 3050.53, median 2911.50, dan modus 321.00. Perbedaan antara mean dan median yang relatif kecil mengindikasikan bahwa sebaran biaya akuisisi pelanggan **cukup merata**, meskipun nilai modus yang lebih rendah menunjukkan bahwa biaya akuisisi yang paling sering muncul berada pada kisaran yang lebih kecil dibandingkan nilai rata-ratanya.
-- Untuk variabel **nilai pelanggan**, rata-rata tercatat sebesar 9098.98, dengan median 8682.50 dan modus 1011.00. Nilai mean yang lebih tinggi daripada median mengindikasikan bahwa distribusi nilai pelanggan cenderung **condong ke kanan**, yang menunjukkan keberadaan pelanggan dengan nilai yang sangat tinggi sehingga meningkatkan nilai rata-rata keseluruhan.
-- Sementara itu, pada variabel **tingkat churn**, diperoleh nilai mean sebesar -14.79, median -14.39, dan modus 13.55. Nilai mean dan median yang relatif berdekatan menunjukkan bahwa secara umum tingkat churn pelanggan berada pada kisaran yang **relatif stabil**. Perbedaan tanda antara nilai modus dan nilai rata-rata mengindikasikan adanya variasi perilaku churn di antara pelanggan, yang dapat dipengaruhi oleh perbedaan karakteristik atau segmen pelanggan tertentu.
+   Berdasarkan hasil statistik deskriptif, variabel **Pendapatan tahunan** memiliki nilai rata - rata (mean) sebesar 31,88, median 31,30 dan modus 1,87. Nilai mean yang sedikit lebih besar daripada median menunjukkan bahwa data pendapatan tahunan cenderung **miring ke kanan**, yang berarti terdapat beberapa pelanggan dengan pendapatan lebih tinggi yang memengaruhi nilai rata - rata. Nilai modus yang jauh lebih kecil dibandingkan mean dan median menunjukkan bahwa pendapatan yang paling sering muncul berada pada tingkat yang lebih rendah.
+   Pada variabel **biaya akuisisi pelanggan**, diperoleh nilai mean sebesar 33,50, median 33,08 dan modus 3,21. Nilai mean dan median yang hampir sama menunjukkan bahwa sebaran data biaya akuisisi pelanggan **cukup merapata.** Nilai modus yang lebih kecil mengindikasi bahwa biaya akusisi yang paling sering terjadi cenderung lebih rendah dibandingkan nilai rata - ratanya.
+   Selanjutnya, variabel **biaya akusisisi pelanggan,** diperoleh nilai sebesar 100,02, median 98,71 dan modus 10,11. Nilai mean yang lebih besar daripada median menunjukkan bahwa distribusi nilai pelanggan **condong ke kanan,** yang menandakan adanya sebagian kecil pelanggan dengan nilai yang sangat tinggi sehingga menaikkan nilai rata - rata. Modus yang jauh lebih kecil menunjukkan bahwa sebagian besar pelanggan memiliki nilai yang lebih rendah dibandingkan dengan rata - rata keseluruhan.
+   Sementara itu, pada variabel tingkat churn, diperoleh nilai mean sebesar -14,79, median -14,39, dan modus 13,55. Nilai mean dan median yang relatif berdekatan menunjukkan bahwa tingkat churn pelanggan secara umum berada pada kisaran yang cukup stabil. Perbedaan tanda antara nilai modus dan nilai rata-rata menunjukkan adanya variasi perilaku churn di antara pelanggan, yang kemungkinan dipengaruhi oleh perbedaan karakteristik atau segmen pelanggan.
 
 - **Ukuran Sebaran (Standar Deviasi, Range, Kuartil):**
- - ### Tabel Ukuran Sebaran
+### Tabel Ukuran Sebaran
 | Variabel                             | Std. Dev | Min   | Q1      | Median  | Q3      |  Max    |
 |--------------------------------------|----------|-------|---------|---------|---------|---------|
-| Pendapatan Tahunan                   | 2064.93  | 10.00 | 893.80  | 2756.50 | 4706.20 | 6689.00 |
-| Biaya Akuisisi Pelanggan             | 2106.48  | 38.00 | 964.50  | 2911.50 | 4894.25 | 6877.00 |
-| Nilai Pelanggan                      | 6284.27  | 134.00| 3006.50 | 8682.50 |14614.25 |20546.00 |
-| Tingkat Churn (%)                    | 20.02    | -50.03| -32.21  | -14.39  | 3.43    | 15.78   |
+| Pendapatan Tahunan                   | 19.79    | 1.00  | 14.31   |  31.30  |  49.04  |  66.89  |
+| Biaya Akuisisi Pelanggan             | 20.03    | 2.56  | 15.23   |  33.08  |  50.92  |  68.77  |
+| Nilai Pelanggan                      | 59.86    | 6.01  | 45.66   |  98.71  | 152.08  |  205.46 |
+| Tingkat Churn (%)                    | 20.02    |-50.03 | -32.21  | -14.39  | 3.43    |  15.78  |
 
 **Interpretasi**:
-  - Nilai standar deviasi **pendapatan tahunan** sebesar 2064.93 menunjukkan bahwa variasi pendapatan pelanggan **tergolong tinggi**. Rentang nilai yang cukup lebar, yaitu dari 10 hingga 6689, mengindikasikan adanya perbedaan pendapatan yang signifikan antar pelanggan. Nilai kuartil pertama (Q1) sebesar 893.80 dan kuartil ketiga (Q3) sebesar 4706.20 menunjukkan bahwa 50% pelanggan memiliki pendapatan tahunan pada kisaran tersebut. Secara keseluruhan, sebaran data pendapatan tahunan mencerminkan karakteristik **pelanggan yang heterogen**.
-- Pada variabel **biaya akuisisi pelanggan**, nilai standar deviasi sebesar 2106.48 menunjukkan adanya variasi biaya yang **cukup besar**. Rentang nilai antara 38.00 hingga 6877.00 mengindikasikan perbedaan biaya akuisisi yang lebar antar pelanggan. Nilai kuartil pertama (Q1) sebesar 964.50 dan kuartil ketiga (Q3) sebesar 4894.25 menunjukkan bahwa sebagian besar biaya akuisisi pelanggan berada pada kisaran tersebut, yang mencerminkan variasi strategi akuisisi pada segmen **pelanggan yang berbeda**.
-- Untuk variabel **nilai pelanggan**, nilai standar deviasi sebesar 6284.27 menunjukkan tingkat variasi data yang sangat tinggi. Rentang nilai yang luas, yaitu dari 134.00 hingga 20546.00, mengindikasikan perbedaan nilai pelanggan yang signifikan. Nilai kuartil pertama (Q1) sebesar 3006.50 dan kuartil ketiga (Q3) sebesar 14614.25 menunjukkan bahwa 50% pelanggan memiliki nilai pelanggan pada rentang tersebut, yang menandakan adanya kelompok pelanggan bernilai tinggi yang memengaruhi distribusi data.
-- Sementara itu, pada variabel **tingkat churn**, nilai standar deviasi sebesar 20.02 menunjukkan adanya variasi perilaku pelanggan yang cukup besar. Rentang nilai antara -50.03 hingga 15.78 mengindikasikan perbedaan tingkat churn yang mencolok antar pelanggan. Nilai kuartil pertama (Q1) sebesar -32.21 dan kuartil ketiga (Q3) sebesar 3.43 menunjukkan bahwa sebagian besar nilai churn berada pada kisaran tersebut. Secara keseluruhan, sebaran data tingkat churn mencerminkan adanya perbedaan pola retensi pelanggan di dalam dataset.
+   Pada variabel **pendapatan tahunan pelanggan**, nilai standar deviasi sebesar 19,79 miliar IDR menunjukkan bahwa variasi pendapatan antar pelanggan **tergolong tinggi**. Rentang nilai yang cukup lebar, yaitu dari 1,00 hingga 66,89 miliar IDR, mengindikasikan adanya perbedaan pendapatan yang signifikan antar pelanggan. Nilai kuartil pertama (Q1) sebesar 14,31 miliar IDR dan kuartil ketiga (Q3) sebesar 49,04 miliar IDR menunjukkan bahwa 50% pelanggan memiliki pendapatan tahunan dalam rentang tersebut. Secara keseluruhan, sebaran data ini mencerminkan **karakteristik pelanggan yang heterogen** dari sisi kemampuan menghasilkan pendapatan.
+   Pada variabel **biaya akuisisi pelanggan**, standar deviasi sebesar 20,03 juta IDR menunjukkan adanya **variasi biaya akuisisi yang cukup besar antar pelanggan**. Rentang nilai antara 2,56 hingga 68,77 juta IDR mengindikasikan perbedaan strategi dan intensitas akuisisi pada berbagai segmen pelanggan. Nilai kuartil pertama (Q1) sebesar 15,23 juta IDR dan kuartil ketiga (Q3) sebesar 50,92 juta IDR menunjukkan bahwa sebagian besar biaya akuisisi pelanggan berada pada kisaran tersebut, yang mencerminkan adanya **perbedaan pendekatan pemasaran terhadap segmen pelanggan yang berbeda**.
+   Untuk variabel **nilai pelanggan**, nilai standar deviasi sebesar 59,86 juta IDR menunjukkan tingkat variasi data yang **sangat tinggi**. Rentang nilai yang luas, yaitu dari 6,01 hingga 205,46 juta IDR, mengindikasikan adanya perbedaan nilai ekonomi pelanggan yang signifikan. Nilai kuartil pertama (Q1) sebesar 45,66 juta IDR dan kuartil ketiga (Q3) sebesar 152,08 juta IDR menunjukkan bahwa 50% pelanggan berada pada rentang nilai tersebut, serta mengindikasikan keberadaan kelompok pelanggan bernilai tinggi yang **berkontribusi besar terhadap distribusi data**.
+   Sementara itu, pada variabel **tingkat churn**, nilai standar deviasi sebesar 20,02% menunjukkan adanya variasi perilaku pelanggan yang **cukup besar dalam hal retensi**. Rentang nilai antara −50,03% hingga 15,78% mengindikasikan perbedaan tingkat churn yang cukup mencolok antar pelanggan. Nilai kuartil pertama (Q1) sebesar −32,21% dan kuartil ketiga (Q3) sebesar 3,43% menunjukkan bahwa sebagian besar nilai churn berada pada kisaran tersebut. Secara keseluruhan, sebaran data tingkat churn mencerminkan adanya **perbedaan pola retensi pelanggan di dalam dataset**.
+
 - **Visualisasi (Histogram & Boxplot):**
-  - ### Histogram Pendapatan Tahunan (Miliar IDR)
+### Histogram Pendapatan Tahunan (Miliar IDR)
 ![Histogram Pendapatan Tahunan](results/histogram_Pendapatan_Tahunan_Miliar_IDR.png)
 **Interpretasi:**
  - Berdasarkan **histogram Pendapatan Tahunan** (dalam miliar IDR), distribusi data terlihat cenderung miring ke kanan. Hal ini menunjukkan bahwa sebagian besar perusahaan memiliki pendapatan tahunan dengan nilai rendah hingga menengah, sementara itu hanya sebagian kacil perusahaan yang memiliki pendapatan yang sangat kecil. Garis merah putus - putus pada histogram menunjukkan nilai mean ebesar 2908,16 miliar IDR berada lebih ke kanan dari konsentrasi data, yang mengindikasikan adanya pengaruh nilai pendapatan tinggi terhadapt rata - rata. Sebaran data yang cukup lebar menandakan bahwa adanya variasi tahunan yang tinggi antar perusahaan. Sehingga pada variabel pendapatan tahunan digunakan sebagai variabel utama dalam analisis statistik deskriptif, karena mampu merepresentasikan karakteristik distribusi dan sebaran data secara jelas.
