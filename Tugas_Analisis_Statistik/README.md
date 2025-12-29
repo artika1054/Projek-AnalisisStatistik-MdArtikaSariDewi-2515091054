@@ -76,8 +76,9 @@ Di bagian ini, mahasiswa diharapkan untuk menyajikan dan menginterpretasikan has
 ### Histogram Pendapatan Tahunan (Miliar IDR)
 ![Histogram Pendapatan Tahunan](results/histogram_Pendapatan_Tahunan_Miliar_IDR.png)
 **Interpretasi:**
- - Berdasarkan **histogram Pendapatan Tahunan** (dalam miliar IDR), distribusi data terlihat cenderung miring ke kanan. Hal ini menunjukkan bahwa sebagian besar perusahaan memiliki pendapatan tahunan dengan nilai rendah hingga menengah, sementara itu hanya sebagian kacil perusahaan yang memiliki pendapatan yang sangat kecil. Garis merah putus - putus pada histogram menunjukkan nilai mean ebesar 2908,16 miliar IDR berada lebih ke kanan dari konsentrasi data, yang mengindikasikan adanya pengaruh nilai pendapatan tinggi terhadapt rata - rata. Sebaran data yang cukup lebar menandakan bahwa adanya variasi tahunan yang tinggi antar perusahaan. Sehingga pada variabel pendapatan tahunan digunakan sebagai variabel utama dalam analisis statistik deskriptif, karena mampu merepresentasikan karakteristik distribusi dan sebaran data secara jelas.
- - 
+ - Berdasarkan histogram Pendapatan Tahunan (dalam miliar IDR), distribusi data terlihat cenderung miring ke kanan (right-skewed). Hal ini menunjukkan bahwa sebagian besar perusahaan memiliki pendapatan tahunan pada kategori rendah hingga menengah, sementara hanya sebagian kecil perusahaan yang memiliki pendapatan sangat tinggi.
+Garis merah putus-putus pada histogram menunjukkan nilai rata-rata (mean) sebesar 31,88 miliar IDR, yang posisinya berada lebih ke kanan dibandingkan dengan konsentrasi data. Kondisi ini mengindikasikan bahwa nilai pendapatan yang tinggi dari beberapa perusahaan berpengaruh terhadap besarnya nilai rata-rata, sehingga mean menjadi lebih besar.
+Selain itu, sebaran data yang cukup lebar menunjukkan adanya variasi pendapatan tahunan yang cukup tinggi antar perusahaan. Oleh karena itu, variabel pendapatan tahunan layak digunakan sebagai variabel utama dalam analisis statistik deskriptif, karena mampu merepresentasikan pola distribusi dan variasi data perusahaan secara jelas.
     - ### Boxplot Pendapatan Tahunan (Miliar IDR)
 ![Boxplot Pendapatan Tahunan](results/boxplot_Pendapatan_Tahunan_Miliar_IDR.png)
 **Intepretasi:**
