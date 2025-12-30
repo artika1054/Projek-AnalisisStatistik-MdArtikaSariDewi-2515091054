@@ -102,10 +102,10 @@ Keputusan : Tidak terdistribusi normal
 Statistik W : 0.94267
 p-value : 3.942e-15
 Keputusan : Tidak terdistribusi normal
-**Interpretasi:**
-   Berdasarkan hasil uji normalitas Shapiro–Wilk, ketiga variabel yang dianalisis, yaitu Pendapatan Tahunan, Nilai Pelanggan, dan Tingkat Churn (%), memiliki nilai p-value yang jauh lebih kecil dari 0,05. Dengan demikian, hipotesis nol (H₀) yang menyatakan bahwa data berdistribusi normal ditolak untuk seluruh variabel.
+- **Interpretasi:**
+- Berdasarkan hasil uji normalitas Shapiro–Wilk, ketiga variabel yang dianalisis, yaitu Pendapatan Tahunan, Nilai Pelanggan, dan Tingkat Churn (%), memiliki nilai p-value yang jauh lebih kecil dari 0,05. Dengan demikian, hipotesis nol (H₀) yang menyatakan bahwa data berdistribusi normal ditolak untuk seluruh variabel.
 Hasil ini menunjukkan bahwa distribusi data pada ketiga variabel tersebut tidak mengikuti distribusi normal. Temuan ini sejalan dengan analisis visual sebelumnya (histogram dan boxplot) yang memperlihatkan adanya kemiringan distribusi (skewness) serta variasi data yang cukup besar.
-Oleh karena itu, untuk menganalisis hubungan antar variabel, digunakan metode non-parametrik, yaitu korelasi Spearman, karena metode ini tidak mensyaratkan asumsi normalitas data dan lebih sesuai untuk data yang berskala ordinal atau memiliki distribusi tidak normal.
+- Oleh karena itu, untuk menganalisis hubungan antar variabel, digunakan metode non-parametrik, yaitu korelasi Spearman, karena metode ini tidak mensyaratkan asumsi normalitas data dan lebih sesuai untuk data yang berskala ordinal atau memiliki distribusi tidak normal.
 
 - **Plot Q-Q:**
   - ![Q–Q Plot Pendapatan Tahunan](results/qqplot_Pendapatan_Tahunan_Miliar_IDR.png)
