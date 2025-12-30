@@ -166,22 +166,23 @@ Sementara itu, sisanya sebesar 0,1% variasi tingkat churn dijelaskan oleh faktor
 - Tingkat_Churn_Persen dan Pendapatan_Tahunan_Miliar_IDR  
 - Tingkat_Churn_Persen dan Nilai_Pelanggan_Juta_IDR  
 Selain itu, digunakan pula **Added-Variable Plots (AVPlots)** untuk mengevaluasi **pengaruh parsial** masing-masing variabel independen dalam model regresi linear berganda.
-  - **Gambar 1 Plot Tingkat_Churn_Persen dan Pendapatan_Tahunan_Miliar_IDR**
+- **Gambar 1 Plot Tingkat_Churn_Persen dan Pendapatan_Tahunan_Miliar_IDR**
  - ![Plot Regresi Pendapatan Tahunan vs Tingkat Churn](results/plot_regresi_Pendapatan_Tahunan_Miliar_IDR_vs_Tingkat_Churn_Persen.png)
  - **Intepretasi: Plot Tingkat_Churn_Persen dan Pendapatan_Tahunan_Miliar_IDR**
- Plot regresi linear ini menunjukkan hubungan antara Pendapatan Tahunan (dalam miliar IDR) dengan Tingkat Churn (dalam persen). Titik-titik biru pada grafik merepresentasikan data aktual, sedangkan garis merah menunjukkan garis regresi linear yang menggambarkan tren hubungan antara kedua variabel tersebut.
-Berdasarkan grafik, terlihat bahwa garis regresi memiliki kemiringan negatif, yang berarti terdapat hubungan terbalik antara pendapatan tahunan dan tingkat churn. Dengan kata lain, semakin tinggi pendapatan tahunan, maka tingkat churn cenderung semakin rendah. Hal ini menunjukkan bahwa entitas dengan pendapatan yang lebih besar memiliki kecenderungan lebih kecil untuk kehilangan pelanggan.
-Nilai Adjusted R-squared sebesar 0,869 menunjukkan bahwa sekitar 86,9% variasi tingkat churn dapat dijelaskan oleh variabel pendapatan tahunan. Nilai ini tergolong tinggi, sehingga model regresi yang digunakan dapat dikatakan cukup baik dan kuat dalam menjelaskan hubungan antara pendapatan dan churn.
-Secara keseluruhan, grafik ini mengindikasikan bahwa pendapatan tahunan merupakan faktor yang berpengaruh signifikan terhadap tingkat churn, meskipun faktor lain di luar model tetap mungkin memengaruhi nilai churn.
+Plot regresi linear ini menunjukkan hubungan antara **Pendapatan_Tahunan_Miliar_IDR (sumbu X)** dan **Tingkat_Churn_Persen (sumbu Y).** Titik-titik biru pada grafik merepresentasikan **data aktual**, sedangkan garis merah **menunjukkan garis regresi linear yang menggambarkan kecenderungan hubungan antara kedua variabel**.
+Berdasarkan grafik, terlihat bahwa garis regresi memiliki kemiringan negatif, yang **berarti terdapat hubungan terbalik antara pendapatan tahunan dan tingkat churn**. Dengan kata lain, semakin tinggi pendapatan tahunan, maka tingkat churn pelanggan cenderung semakin rendah. Hal ini menunjukkan bahwa entitas dengan pendapatan yang lebih besar memiliki kecenderungan lebih kecil untuk kehilangan pelanggan.
+Selain itu, titik-titik data terlihat cukup dekat dengan garis regresi, yang menandakan bahwa hubungan antara kedua variabel **bersifat kuat dan konsisten**. Nilai Adjusted R-squared sebesar 0,999 menunjukkan bahwa sekitar 99,9% variasi tingkat churn dapat dijelaskan oleh pendapatan tahunan melalui model regresi ini. Nilai tersebut tergolong sangat tinggi, sehingga model regresi yang digunakan memiliki kemampuan penjelasan yang sangat baik.
+- Secara keseluruhan, grafik ini mengindikasikan bahwa pendapatan tahunan merupakan faktor yang sangat berpengaruh terhadap tingkat churn, meskipun dalam praktiknya masih terdapat kemungkinan faktor lain di luar model yang turut memengaruhi tingkat churn pelanggan.
+
  - **Gambar 2 Plot Tingkat_Churn_Persen dan Nilai_Pelanggan_Juta_IDR**
 - ![Plot Regresi Nilai Pelanggan vs Tingkat Churn](results/plot_regresi_Nilai_Pelanggan_Juta_IDR_vs_Tingkat_Churn_Persen.png)
 
-- **Intepretasi:**
-  Plot regresi linear ini menunjukkan hubungan antara Nilai Pelanggan (dalam juta IDR) dengan Tingkat Churn (dalam persen). Titik-titik pada grafik merepresentasikan data aktual, sedangkan garis regresi menunjukkan arah dan pola hubungan linear antara kedua variabel tersebut.
-Dari grafik terlihat bahwa garis regresi memiliki kemiringan negatif, yang menandakan adanya hubungan terbalik antara nilai pelanggan dan tingkat churn. Artinya, semakin tinggi nilai pelanggan, maka tingkat churn cenderung semakin rendah. Pelanggan dengan nilai yang lebih besar cenderung lebih loyal dan tidak mudah berhenti.
-Nilai Adjusted R-squared sebesar 0,869 menunjukkan bahwa sekitar 86,9% variasi tingkat churn dapat dijelaskan oleh variabel nilai pelanggan. Nilai ini tergolong tinggi, sehingga model regresi yang digunakan memiliki kemampuan yang baik dalam menjelaskan hubungan antara nilai pelanggan dan churn.
-Meskipun terdapat beberapa data yang menyebar cukup jauh dari garis regresi, pola keseluruhan tetap menunjukkan tren yang konsisten. Hal ini mengindikasikan bahwa nilai pelanggan merupakan salah satu faktor penting dalam memengaruhi tingkat churn, meskipun faktor lain di luar model juga dapat berperan.
-
+- **Intepretasi: Plot Tingkat_Churn_Persen dan Nilai_Pelanggan_Juta_IDR**
+Plot regresi linear ini menunjukkan hubungan antara Nilai_Pelanggan_Juta_IDR (sumbu X) dan Tingkat_Churn_Persen (sumbu Y). Titik-titik pada grafik merepresentasikan **data aktual**, sedangkan garis regresi **menunjukkan arah dan pola hubungan linear antara kedua variabel**.
+Berdasarkan grafik, terlihat bahwa garis regresi memiliki kemiringan negatif, yang **menandakan adanya hubungan terbalik antara nilai pelanggan dan tingkat churn**. Artinya, semakin tinggi nilai pelanggan, maka tingkat churn cenderung semakin rendah. Hal ini menunjukkan bahwa pelanggan dengan nilai yang lebih tinggi cenderung lebih loyal dan memiliki kemungkinan yang lebih kecil untuk berhenti menggunakan layanan.
+Selain itu, sebagian besar titik data terlihat berada dekat dengan garis regresi, yang menunjukkan bahwa hubungan antara nilai pelanggan dan tingkat churn **bersifat kuat dan konsisten**. Nilai Adjusted R-squared sebesar 0,999 menunjukkan bahwa sekitar 99,9% variasi tingkat churn dapat dijelaskan oleh nilai pelanggan melalui model regresi ini. Nilai tersebut **tergolong sangat tinggi**, sehingga model regresi memiliki kemampuan yang sangat baik dalam menjelaskan hubungan antara kedua variabel.
+- Secara keseluruhan, grafik ini mengindikasikan bahwa nilai pelanggan merupakan faktor yang sangat penting dalam memengaruhi tingkat churn, meskipun dalam praktiknya masih terdapat kemungkinan faktor lain di luar model yang turut memengaruhi tingkat churn pelanggan.
+- 
 **Visualisasi (Gambar 3 Regresi pada avPlots):**
 ![AVPlots Regresi Churn](results/avplots_regresi_churn.png)
 AVPlots digunakan untuk mengevaluasi pengaruh parsial masing-masing variabel independen terhadap Tingkat_Churn_Persen.
@@ -190,30 +191,32 @@ AVPlots digunakan untuk mengevaluasi pengaruh parsial masing-masing variabel ind
 Added Variable Plot (AV Plot) ini digunakan untuk melihat pengaruh masing-masing variabel independen terhadap tingkat churn, dengan asumsi variabel independen lainnya sudah dikendalikan (dianggap konstan). Pada grafik ini terdapat dua plot, yaitu untuk Pendapatan Tahunan dan Nilai Pelanggan.
 
 **1. AV Plot Pendapatan Tahunan**
-Plot sebelah kiri menunjukkan hubungan antara Pendapatan Tahunan (setelah mengontrol variabel lain) dengan Tingkat Churn. Terlihat bahwa garis tren memiliki kemiringan negatif, yang berarti bahwa ketika pendapatan tahunan meningkat, tingkat churn cenderung menurun, meskipun pengaruh variabel lain telah diperhitungkan.
-Sebaran titik yang relatif mengikuti arah garis tren menunjukkan bahwa pendapatan tahunan memberikan kontribusi nyata dalam menjelaskan perubahan tingkat churn.
+Plot sebelah kiri menunjukkan hubungan antara Pendapatan_Tahunan_Miliar_IDR dan Tingkat_Churn_Persen setelah pengaruh variabel Nilai Pelanggan dikendalikan. Garis tren pada plot ini memiliki kemiringan positif, yang berarti bahwa ketika pendapatan tahunan meningkat, tingkat churn cenderung meningkat, dengan asumsi variabel lain bersifat konstan.
+Sebaran titik data yang mengikuti arah garis tren menunjukkan bahwa pendapatan tahunan tetap memberikan kontribusi terhadap perubahan tingkat churn, meskipun pengaruh variabel nilai pelanggan telah diperhitungkan. Hal ini menandakan bahwa pendapatan tahunan memiliki pengaruh parsial yang nyata terhadap tingkat churn dalam model regresi.
 
 **2. AV Plot Nilai Pelanggan**
-Plot sebelah kanan menggambarkan hubungan antara Nilai Pelanggan (setelah mengontrol variabel lain) dengan Tingkat Churn. Sama seperti plot sebelumnya, garis tren juga menunjukkan hubungan negatif. Artinya, semakin tinggi nilai pelanggan, maka tingkat churn cenderung semakin rendah, bahkan setelah pengaruh variabel pendapatan tahunan dikendalikan.
-Pola titik yang cukup konsisten dengan garis tren menandakan bahwa nilai pelanggan juga memiliki pengaruh signifikan terhadap tingkat churn.
-
+Plot sebelah kanan menggambarkan hubungan antara Nilai_Pelanggan_Juta_IDR dan Tingkat_Churn_Persen setelah pengaruh variabel Pendapatan Tahunan dikendalikan. Terlihat bahwa garis tren memiliki kemiringan negatif, yang menunjukkan bahwa semakin tinggi nilai pelanggan, maka tingkat churn cenderung semakin rendah, meskipun variabel pendapatan tahunan telah dikontrol.
+Pola sebaran titik yang cukup dekat dan searah dengan garis tren menunjukkan bahwa nilai pelanggan memiliki pengaruh parsial yang kuat dan konsisten terhadap tingkat churn. Hal ini mengindikasikan bahwa peningkatan nilai pelanggan berperan penting dalam menurunkan kecenderungan pelanggan untuk berhenti (churn).
+- AV Plot menunjukkan bahwa baik pendapatan tahunan maupun nilai pelanggan memiliki pengaruh masing-masing terhadap tingkat churn setelah saling dikontrol, meskipun arah pengaruh keduanya berbeda.
 ---
 
 ## 6. Kesimpulan
 - **Rangkuman Script 2 - Script 5**
  - **1. Statistika Deskriptif dan Visualisasi**
-- Pendapatan tahunan, biaya akuisisi dan nilai pelanggan menunjukkan distribusi data yang **bervariasi tinggi**, dengan sebagian nilai ekstrem yang memengaruhi rata - rata
-- Tingkat churn pelanggan bervariasi, namun secara umum berada pada kisaran yang relatif stabil
-- Histogram dan boxplot membantu memvisualisasikan sebaran data, distribusi miring dan variasi antar pelanggan
+- Hasil statistik deskriptif menunjukkan bahwa variabel Pendapatan Tahunan, Biaya Akuisisi Pelanggan, dan Nilai Pelanggan memiliki tingkat variasi data yang cukup tinggi. Hal ini terlihat dari nilai standar deviasi yang besar serta rentang data yang lebar. Distribusi data pada ketiga variabel tersebut cenderung tidak simetris (miring ke kanan), yang mengindikasikan adanya sejumlah nilai ekstrem yang memengaruhi nilai rata-rata.
+Sementara itu, Tingkat Churn (%) menunjukkan variasi yang cukup besar antar pelanggan, meskipun nilai median dan kuartil menunjukkan bahwa sebagian besar data berada pada kisaran tertentu. Visualisasi berupa histogram dan boxplot membantu memperjelas pola sebaran data, tingkat variasi, serta arah kemiringan distribusi pada masing-masing variabel.
  - **2. Uji Normalitas**
-Semua variabel utama (Pendapatan Tahunan, Nilai Pelanggan, dan Tingkat Churn) **tidak terdistribusi normal**, sehingga analisis korelasi dilakukan menggunakan metode **Spearman** yang non-parametrik
+Berdasarkan hasil uji normalitas Shapiro–Wilk, seluruh variabel utama dalam penelitian ini, yaitu Pendapatan Tahunan, Nilai Pelanggan, dan Tingkat Churn, terbukti tidak terdistribusi normal karena memiliki nilai p-value < 0,05. Hasil ini juga diperkuat oleh analisis visual melalui Q–Q plot yang menunjukkan penyimpangan titik data dari garis normal.
+Oleh karena itu, pemilihan metode analisis selanjutnya disesuaikan dengan kondisi data, khususnya pada analisis hubungan antar variabel.
  - **3. Analisis Korelasi**
-Terdapat hubungan **positif dan kuat** antara Pendapatan Tahunan dan Nilai pelanggan (ρ = 0,706, p < 0,05), menunjukkan bahwa peningkatan pendapatan tahunan cenderung diikuti oleh peningkatan nilai pelanggan
+Karena data tidak memenuhi asumsi normalitas, analisis korelasi dilakukan menggunakan metode Spearman yang bersifat non-parametrik. Hasil analisis menunjukkan adanya hubungan positif yang sangat kuat dan signifikan antara Pendapatan Tahunan dan Nilai Pelanggan.
+Temuan ini mengindikasikan bahwa peningkatan pendapatan tahunan cenderung diikuti oleh peningkatan nilai pelanggan, sehingga kedua variabel tersebut memiliki keterkaitan yang sangat erat dalam dataset yang dianalisis.
  - **4. Nilai Regresi Berganda**
-- Model regresi menunjukkan bahwa **Pendapatan Tahunan** dan **Nilai Pelanggan** memiliki pengaruh negatif terhadap tingkat churn. Artinya, semakin tinggi pendapatan atau nilai pelanggan, semakin rendah kemungkinan churn
-- Adjusted R-squared sebesar **89,9%** menunjukkan bahwa model mampu menjelaskan sebagian besar variasi tingkat churn
-- AVPlots menegaskan bahwa kedua variabel independen memberikan kontribusi signifikan secara persial terhadapt perubahan tingkat churn
- - **Tambahan**
-  Analisis ini menekankan pentingnya mengombinasikan **statistik deskriptif, visualisasi** dan **analisis hubungan antar variabel** agar hasil penelitian lebih mudah dipahami dan dapat digunakan sebagai dasar untuk pengambilan keputusan. Dan, kemampuan dalam mebuat plot (histogram, boxplot, scatter plot) sekaligus mengintepretasikan hasil statistik menjadi kunci untuk memahami data secara menyeluruh.
-
- terimakasi:)
+Hasil regresi linear berganda menunjukkan bahwa:
+   - **Pendapatan Tahunan** memiliki pengaruh **positif** terhadap Tingkat Churn, yang berarti semakin tinggi pendapatan, tingkat churn cenderung meningkat ketika nilai pelanggan dianggap konstan.
+   - **Nilai Pelanggan** memiliki pengaruh **negatif** terhadap Tingkat Churn, yang menunjukkan bahwa semakin tinggi nilai pelanggan, maka kecenderungan pelanggan untuk churn semakin rendah.
+- Nilai Adjusted R-squared sebesar 99,9% menunjukkan bahwa model regresi memiliki kemampuan penjelasan yang sangat tinggi, di mana hampir seluruh variasi Tingkat Churn dapat dijelaskan oleh kombinasi Pendapatan Tahunan dan Nilai Pelanggan. Hasil ini diperkuat oleh Added Variable Plots (AVPlots) yang menunjukkan bahwa masing-masing variabel independen tetap memberikan pengaruh parsial terhadap tingkat churn setelah saling dikontrol.
+ - **Tambahan (Refleksi)**
+- Melalui proses analisis ini, saya memperoleh pemahaman bahwa analisis data tidak hanya berfokus pada hasil akhir, tetapi juga pada alur dan tahapan analisis yang sistematis. Dimulai dari statistik deskriptif untuk memahami karakteristik data, dilanjutkan dengan uji asumsi yang menentukan metode analisis yang tepat, kemudian analisis korelasi, hingga akhirnya membangun dan mengevaluasi model regresi.
+- Selain itu, pengalaman menggunakan RStudio menunjukkan bahwa kebersihan Environment sangat penting, terutama bagi pemula. Objek data yang tertinggal atau tidak terpakai di Environment dapat menyebabkan kekeliruan dalam pemanggilan data dan menghasilkan output yang tidak sesuai. Oleh karena itu, sebelum melakukan analisis, sangat disarankan untuk memastikan bahwa Environment dalam kondisi bersih dan hanya berisi objek yang benar-benar digunakan.
+- Secara keseluruhan, analisis ini memberikan pengalaman belajar yang berharga dalam memahami bagaimana mengombinasikan statistik deskriptif, visualisasi, uji asumsi, dan analisis inferensial untuk menghasilkan interpretasi data yang logis, runtut, dan dapat dipertanggungjawabkan, khususnya bagi pemula yang sedang mempelajari analisis data menggunakan RStudio.
