@@ -32,7 +32,7 @@ get_mode <- function(v) {
 mode_value <- get_mode(data_bersih[["Pendapatan_Tahunan_Miliar_IDR"]])
 print(paste("Modus dari", "Pendapatan_Tahunan_Miliar_IDR:", mode_value))
 
-#==========--variabelyang lain--=============
+#==========--variabel numerik yang lain--=============
 vars_numerik <- c(
   "Biaya_Akuisisi_Pelanggan_Juta_IDR",
   "Nilai_Pelanggan_Juta_IDR",
@@ -129,6 +129,7 @@ t(kuartil_deskriptif)
 # -----------------------------------------------------------------
 # A. Histogram
 library(ggplot2)
+#Pendapatan Tahunan (Miliar IDR)
 hist_plot <- ggplot(data_bersih, aes_string(x = "Pendapatan_Tahunan_Miliar_IDR")) +
   geom_histogram(bins = 20, fill = "skyblue", color = "white") +
   geom_vline(aes(xintercept = mean_value), color = "red", linetype = "dashed", size = 1) +
@@ -143,16 +144,15 @@ hist_plot <- ggplot(data_bersih, aes_string(x = "Pendapatan_Tahunan_Miliar_IDR")
 print(hist_plot)
 # Menyimpan histogram ke folder 'results'
 ggsave(
-  filename = paste0("../results/histogram_", "Pendapatan_Tahunan_Miliar_IDR" , ".png"),
+  filename = paste0("D:/SEMESTER 1/01-Statistik-Deskriptif/Tugas_Analisis_Statistik/results/histogram_", "Pendapatan_Tahunan_Miliar_IDR" , ".png"),
   plot = hist_plot,
   width = 8,
   height = 6
 )
 print(paste("Histogram disimpan di folder 'results' dengan nama histogram_", "Pendapatan_Tahunan_Miliar_IDR", ".png", sep=""))
 
-
+#--------------------------------------------------------------------------------
 # B. Boxplot
-# Boxplot berguna untuk mengidentifikasi pencilan (outliers) dan melihat sebaran kuartil.
 box_plot <- ggplot(data_bersih, aes_string(y = "Pendapatan_Tahunan_Miliar_IDR")) +
   geom_boxplot(fill = "salmon", color = "black") +
   labs(
@@ -165,7 +165,7 @@ print(box_plot)
 
 # Menyimpan boxplot ke folder 'results'
 ggsave(
-  filename = paste0("../results/boxplot_", kolom_analisis, ".png"),
+  filename = paste0("D:/SEMESTER 1/01-Statistik-Deskriptif/Tugas_Analisis_Statistik/results/boxplot_", kolom_analisis, ".png"),
   plot = box_plot,
   width = 6,
   height = 8
