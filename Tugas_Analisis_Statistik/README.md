@@ -140,25 +140,26 @@ Selain itu, tidak terlihat adanya penyimpangan pola yang signifikan maupun hubun
   X₁ = Pendapatan_Tahunan_Miliar_IDR
   X₂ = Nilai_Pelanggan_Juta_IDR
 - Dari bagian Coefficients:
-Intercept (b₀) = 13,87
-Pendapatan_Tahunan_Miliar_IDR (b₁) = -0,004967
-Nilai_Pelanggan_Juta_IDR (b₂) = -0,001564
+Intercept (b₀) = 18.8
+Pendapatan_Tahunan_Miliar_IDR (b₁) = 0.197
+Nilai_Pelanggan_Juta_IDR (b₂) = −0.399
 - *Persamaan regresi:*
-- Tingkat Churn (%) = 13,87 − 0,004967(Pendapatan Tahunan) − 0,001564(Nilai Pelanggan)
+- Tingkat Churn (%) = 18,8 + 0,197(Pendapatan Tahunan) − 0,399(Nilai Pelanggan)
   - **Interpretasi:**
    Berdasarkan hasil **Analisis Regresi Berganda** dengan variabel dependen **Tingkat_Churn_Persen** serta variabel independen **Pendapatan_Tahunan_Miliar_IDR** dan **Nilai_Pelanggan_Juta_IDR**, diperoleh intepretasi koefisien sebagai berikut:
 - **Intercept (b0)**
-Nilai intercept (b0) sebesar **13,87** menunjukkan bahwa ketika pendapatan tahunan dan nilai pelanggan bernilai nol (0), maka tingkat churn pelanggan diperkirakan sebesar **13,87%**. Nilai ini merupakan titik awal model dan bersifat teoritis, karena dalam praktik kondisi seluruh variabel independen bernilai nol jarang terjadi
+Nilai intercept (b₀) sebesar 18,8 menunjukkan bahwa ketika **Pendapatan Tahunan dan Nilai Pelanggan bernilai nol (0)**, maka tingkat churn pelanggan **diperkirakan sebesar 18,78%**. Nilai ini merupakan konstanta model dan bersifat teoritis, karena dalam praktik kondisi seluruh variabel independen bernilai nol jarang terjadi.
 - **Slope (b1) - Pendapatan Tahunan**
-Koefisien slope (b1) untuk variabel Pendapatan_Tahunan_Miliar_IDR sebesar -0,004967 menunjukkan bahwa setiap peningkatan 1 miliar rupiah pendapatn tahunan akan menurunkan tingkat churn pelanggan sebesar sekitar 0,005% dengan nilai pelanggan dianggap **konstan**. Tanda negatif pada koefisien menunjukkan bahwa hubungan yang berlawanan antara pendapatan tahunan dan tingkat churn.
+Koefisien slope (b₁) untuk variabel Pendapatan_Tahunan_Miliar_IDR **sebesar 0,197** menunjukkan bahwa setiap peningkatan pendapatan tahunan sebesar 1 miliar rupiah akan meningkatkan tingkat churn pelanggan **sebesar sekitar 0,197%,** dengan asumsi nilai pelanggan dianggap konstan. Tanda positif pada koefisien ini menunjukkan adanya hubungan searah antara pendapatan tahunan dan tingkat churn.
 - **Slope (b2) - Nilai Pelanggan**
-Koefisien slope (b2) untuk variabel Nilai_Pelanggan_Juta_IDR sebesar -0,001564 menunjukkan bahwa setiap peningkatan 1 juta rupiah nilai pelanggan akan menurunkan tingkat churn pelanggan sebesar sekitar 0,0016% dengan pendapatan tahunan dianggap **konstan**. Hal ini menunjukkan bahwa semakin tinggi nilai pelanggan, maka kecenderungan pelanggan untuk berhenti (churn) semakin rendah.
+Koefisien slope (b₂) untuk variabel Nilai_Pelanggan_Juta_IDR sebesar **−0,399** menunjukkan bahwa setiap peningkatan nilai pelanggan sebesar 1 juta rupiah akan **menurunkan tingkat churn pelanggan sebesar sekitar 0,399%,** dengan asumsi pendapatan tahunan dianggap konstan. Hal ini menunjukkan bahwa semakin tinggi nilai pelanggan, maka kecenderungan pelanggan untuk berhenti (churn) semakin rendah.
 
 - **Evaluasi Model (R-squared):**
-  - *Nilai R-squared* : **Adjusted R-squared = 0.869 atau 86.9 %**
+  - *Nilai R-squared* : **Adjusted R-squared = 0.999 atau 99.9 %**
   - **Interpretasi**:
-Berdasarkan hasil analisis regresi, diperoleh nilai Adjusted R-squared sebesar **0,869**. Hal ini menunjukkan bahwa sebanyak **86,9%** variasi pada variabel dependen, yaitu **Tingkat_Churn_Persen**, dapat dijelaskan oleh model regresi yang terdiri dari **variabel Pendapatan_Tahunan_Miliar_IDR**dan **Nilai_Pelanggan_Juta_IDR** secara simultan.
-Sementara itu,**13,1% variasi sisanya dijelaskan oleh faktor lain di luar model regresi yang tidak diteliti dalam penelitian ini.**
+Berdasarkan hasil analisis regresi linear berganda, diperoleh nilai Adjusted R-squared sebesar **0,999 atau 99,9%**. Nilai ini menunjukkan bahwa sebesar 99,9% variasi pada variabel Tingkat_Churn_Persen dapat dijelaskan oleh variabel Pendapatan_Tahunan_Miliar_IDR dan Nilai_Pelanggan_Juta_IDR secara bersama-sama dalam model regresi yang digunakan.
+Dengan kata lain, perubahan tingkat churn pelanggan dalam data ini sebagian besar dapat dijelaskan oleh perubahan pendapatan tahunan dan nilai pelanggan, sehingga model regresi yang dibangun memiliki kemampuan penjelasan yang sangat tinggi terhadap variabel dependen.
+Sementara itu, sisanya sebesar 0,1% variasi tingkat churn dijelaskan oleh faktor lain di luar model atau oleh unsur kesalahan (error).
 
 - **Visualisasi (Garis Regresi pada Scatter Plot):**
 - Analisis ini dilengkapi dengan **dua plot regresi linear** yang menunjukkan hubungan antara:
