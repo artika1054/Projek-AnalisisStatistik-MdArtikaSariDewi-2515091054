@@ -108,4 +108,24 @@ if(nrow(data_bersih) < 5000) {
   print("Jumlah data lebih dari 5000, uji Shapiro-Wilk mungkin tidak akurat. Pertimbangkan uji lain seperti Kolmogorov-Smirnov atau andalkan inspeksi visual (Q-Q Plot).")
 }
 
+# -----------------------------------------------------------------
+#data -> Tingkat_Churn_Persen
+if(nrow(data_bersih) < 5000) {
+  shapiro_test_result <- shapiro.test(data_bersih[["Tingkat_Churn_Persen"]])
+  
+  print("--- Hasil Uji Normalitas Shapiro-Wilk ---")
+  print(shapiro_test_result)
+  
+  # Interpretasi otomatis
+  p_value <- shapiro_test_result$p.value
+  if (p_value > 0.05) {
+    print(paste("Interpretasi: p-value =", round(p_value, 4), "> 0.05. Data kemungkinan besar terdistribusi normal."))
+  } else {
+    print(paste("Interpretasi: p-value =", round(p_value, 4), "<= 0.05. Data kemungkinan besar TIDAK terdistribusi normal."))
+  }
+  
+} else {
+  print("Jumlah data lebih dari 5000, uji Shapiro-Wilk mungkin tidak akurat. Pertimbangkan uji lain seperti Kolmogorov-Smirnov atau andalkan inspeksi visual (Q-Q Plot).")
+}
+
 #============SELESAI================
