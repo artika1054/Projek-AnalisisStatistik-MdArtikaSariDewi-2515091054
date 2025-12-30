@@ -92,15 +92,15 @@ Selain itu, sebaran data yang cukup lebar menunjukkan adanya variasi pendapatan 
 _Uji Normalitas dilakukan terhadap Tiga Variabel,_ yaitu **Pendapatan Tahunan, Nilai Pelanggan dan Tingkat Churn**. Pengujian ini bertujuan untuk memastikan pemenuhan asumsi distribusi data sebelum dilakukan **analisis korelasi** dan **analisis regresi**.
 **1. Pendapatan Tahunan**
 Statistik W : 0.94664
-p-value : 1.497e-14
+**p-value : 1.497e-14**
 Keputusan : Tidak terdistribusi normal
 **2. Nilai Pelanggan**
 Statistik W : 0.94414
-p-value : < 6.679e-15
+**p-value : < 6.679e-15**
 Keputusan : Tidak terdistribusi normal
 **3. Tingkat Churn (%)**
 Statistik W : 0.94267
-p-value : 3.942e-15
+**p-value : 3.942e-15**
 Keputusan : Tidak terdistribusi normal
 - **Interpretasi:**
 - Berdasarkan hasil uji normalitas Shapiro–Wilk, ketiga variabel yang dianalisis, yaitu Pendapatan Tahunan, Nilai Pelanggan, dan Tingkat Churn (%), memiliki nilai p-value yang jauh lebih kecil dari 0,05. Dengan demikian, hipotesis nol (H₀) yang menyatakan bahwa data berdistribusi normal ditolak untuk seluruh variabel.
@@ -118,15 +118,19 @@ Berdasarkan Q–Q plot, data Pendapatan Tahunan tidak terdistribusi normal, kare
 ### 5.3. Analisis Korelasi
 - **Nilai Koefisien Korelasi:**
   - Metode korelasi: Spearman
-Koefisien korelasi (ρ): 0.706
-p-value: < 0.05
+Koefisien korelasi (ρ): 0.997
+p-value: < 0.001
   - **Interpretasi:**
-Berdasarkan hasil analisis korelasi menggunakan **metode Spearman**, diperoleh nilai koefisien korelasi (ρ) sebesar 0,706 dengan nilai p-value < 0,05. Hasil ini menunjukkan bahwa terdapat hubungan yang positif dan kuat antara Pendapatan Tahunan dan Nilai Pelanggan. Artinya, peningkatan pendapatan tahunan cenderung diikuti oleh peningkatan nilai pelanggan. Hubungan tersebut bersifat signifikan secara statistik, sehingga dapat disimpulkan bahwa pendapatan tahunan memiliki keterkaitan yang bermakna dengan nilai pelanggan dalam data yang dianalisis.
+Berdasarkan hasil analisis korelasi menggunakan **metode Spearman**, diperoleh nilai koefisien korelasi (ρ) sebesar 0,997 dengan p-value < 0,001. Nilai koefisien tersebut menunjukkan adanya hubungan positif yang sangat kuat antara Pendapatan Tahunan dan Nilai Pelanggan.
+- Artinya, peningkatan pendapatan tahunan cenderung diikuti oleh peningkatan nilai pelanggan dengan pola hubungan yang hampir searah secara sempurna. Nilai p-value yang sangat kecil mengindikasikan bahwa hubungan tersebut signifikan secara statistik, sehingga dapat disimpulkan bahwa terdapat keterkaitan yang nyata dan bermakna antara pendapatan tahunan dan nilai pelanggan dalam data yang dianalisis.
 
 - **Visualisasi (Scatter Plot):**
   - ![Scatter Plot Pendapatan Tahunan vs Nilai Pelanggan](results/scatterplot_Pendapatan_Tahunan_Miliar_IDR_vs_Nilai_Pelanggan_Juta_IDR.png)
   - **Interpretasi**:
-Pola sebaran pada scatter plot menunjukkan kecenderungan hubungan positif antara Pendapatan Tahunan dan Nilai Pelanggan. Meskipun data tidak sepenuhnya membentuk hubungan linear yang sempurna dan terdapat variasi serta outlier, arah tren yang meningkat secara konsisten mendukung hasil koefisien korelasi Spearman sebesar 0,706 yang menunjukkan hubungan positif dan kuat.
+Berdasarkan scatter plot antara **Pendapatan Tahunan (Miliar IDR)** dan **Nilai Pelanggan (Juta IDR)**, terlihat adanya pola **hubungan positif yang sangat jelas**. Titik-titik data cenderung membentuk pola menaik, dimana **semakin tinggi pendapatan tahunan, semakin tinggi pula nilai pelanggan yang dihasilkan**.
+Sebaran titik pada grafik menunjukkan bahwa hubungan antar kedua variabel bersifat konsisten dan hampir linear, yang ditandai dengan garis tren merah yang memiliki kemiringan **positif** dan **mengikuti arah sebaran data**. Hal ini mengindikasikan bahwa perubahan pada pendapatan tahunan diikuti oleh perubahan yang searah pada nilai pelanggan.
+Selain itu, tidak terlihat adanya penyimpangan pola yang signifikan maupun hubungan non-linear yang kuat. Meskipun terdapat variasi nilai pada beberapa titik, pola umum tetap menunjukkan **keterkaitan yang sangat erat antara kedua variabel**. Temuan visual ini sejalan dengan hasil korelasi Spearman yang menunjukkan koefisien korelasi sangat tinggi dan signifikan secara statistik.
+- Secara keseluruhan, scatter plot memperkuat kesimpulan bahwa **pendapatan tahunan memiliki hubungan yang sangat kuat dan positif dengan nilai pelanggan**, sehingga pendapatan tahunan dapat dianggap sebagai indikator penting dalam menjelaskan variasi nilai pelanggan pada data yang dianalisis.
 
 ### 5.4. Analisis Regresi
 - **Model Regresi:**
