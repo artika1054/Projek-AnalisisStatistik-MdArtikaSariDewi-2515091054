@@ -82,27 +82,31 @@ Selain itu, sebaran data yang cukup lebar menunjukkan adanya variasi pendapatan 
     - ### Boxplot Pendapatan Tahunan (Miliar IDR)
 ![Boxplot Pendapatan Tahunan](results/boxplot_Pendapatan_Tahunan_Miliar_IDR.png)
 **Intepretasi:**
-- Berdasarkan boxplot, dapat diketahui bahwa pendapatan tahunan memiliki variasi data yang cukup besar. Nilai minimum pendapatan tercatat sebesar 10 miliar IDR, sedangkan nilai maksimum mencapai 6.689 miliar IDR, menunjukkan **rentang data yang sangat lebar**.
-- Median pendapatan tahunan berada pada nilai 2.756,50 miliar IDR, yang berarti separuh dari observasi memiliki pendapatan di bawah nilai tersebut dan separuh lainnya di atasnya. Kuartil bawah (Q1) sebesar 893,80 miliar IDR dan kuartil atas (Q3) sebesar 4.706,20 miliar IDR, sehingga rentang antar **kuartil (IQR) tergolong besar**. Hal ini mengindikasikan bahwa sebaran pendapatan antar objek pengamatan cukup heterogen. Posisi median yang relatif lebih dekat ke kuartil bawah serta whisker atas yang lebih panjang dibandingkan whisker bawah menunjukkan bahwa distribusi data cenderung miring ke kanan (positively skewed). Artinya, terdapat beberapa nilai pendapatan yang sangat tinggi yang menarik distribusi ke arah kanan.
-- Standar deviasi sebesar 2.064,93 miliar IDR memperkuat temuan ini, karena menunjukkan tingkat penyebaran data yang tinggi terhadap nilai rata-ratanya. Tidak tampak adanya outlier ekstrem yang ditandai secara visual, namun variasi data tetap besar. 
+- Berdasarkan boxplot dan tabel ukuran sebaran, pendapatan tahunan menunjukkan **variasi data yang cukup besar**. Nilai pendapatan minimum tercatat sebesar 1,00 miliar IDR, sedangkan nilai maksimum mencapai 66,89 miliar IDR, yang mengindikasikan bahwa **rentang data relatif lebar**.
+- Nilai median pendapatan tahunan berada pada 31,30 miliar IDR, yang berarti separuh observasi memiliki pendapatan di bawah nilai tersebut dan separuh lainnya berada di atasnya. Kuartil bawah (Q1) sebesar 14,31 miliar IDR dan kuartil atas (Q3) sebesar 49,04 miliar IDR, sehingga nilai interquartile range (IQR) tergolong cukup besar. Hal ini menunjukkan bahwa sebaran pendapatan antar **objek pengamatan bersifat heterogen**.
+- Secara visual, posisi median yang sedikit lebih dekat ke kuartil bawah serta whisker atas yang lebih panjang dibandingkan whisker bawah mengindikasikan bahwa distribusi pendapatan tahunan **cenderung miring ke kanan** (positively skewed). Artinya, terdapat beberapa perusahaan dengan pendapatan relatif tinggi yang menarik distribusi ke arah kanan.
+- Nilai standar deviasi sebesar 19,79 miliar IDR turut memperkuat temuan ini, karena menunjukkan tingkat penyebaran data yang cukup besar terhadap nilai pusatnya. Berdasarkan boxplot, tidak terlihat adanya outlier ekstrem, namun variasi data tetap cukup tinggi.
 
 ### 5.2. Uji Normalitas
 - Ringkasan Hasil Uji Shapiro-Wilk:
-_Uji Normalitas dilakukan terhadap Tiga Variabel,_ yaitu P**endapatan Tahunan, Nilai Pelanggan dan Tingkat Churn**. Pengujian ini bertujuan untuk memastikan pemenuhan asumsi distribusi data sebelum dilakukan **analisis korelasi** dan **analisis regresi**.
+_Uji Normalitas dilakukan terhadap Tiga Variabel,_ yaitu **Pendapatan Tahunan, Nilai Pelanggan dan Tingkat Churn**. Pengujian ini bertujuan untuk memastikan pemenuhan asumsi distribusi data sebelum dilakukan **analisis korelasi** dan **analisis regresi**.
 **1. Pendapatan Tahunan**
-Statistik W : 0.92753
-p-value : 2.2e-16
+Statistik W : 0.94664
+p-value : 1.497e-14
 Keputusan : Tidak terdistribusi normal
 **2. Nilai Pelanggan**
-Statistik W : 0.92792
-p-value : < 2.2e-16
+Statistik W : 0.94414
+p-value : < 6.679e-15
 Keputusan : Tidak terdistribusi normal
 **3. Tingkat Churn (%)**
 Statistik W : 0.94267
 p-value : 3.942e-15
 Keputusan : Tidak terdistribusi normal
-  - **Interpretasi:**
-   Berdasarkan hasil uji Shapiro–Wilk, seluruh variabel yang dianalisis, yaitu Pendapatan Tahunan, Nilai Pelanggan, dan Tingkat Churn, memiliki nilai p-value ≤ 0,05. Hal ini menunjukkan bahwa ketiga variabel tersebut tidak terdistribusi normal. Oleh karena itu, analisis hubungan antar variabel dilakukan menggunakan metode non-parametrik, yaitu korelasi Spearman, yang tidak mensyaratkan asumsi normalitas data.
+**Interpretasi:**
+   Berdasarkan hasil uji normalitas Shapiro–Wilk, ketiga variabel yang dianalisis, yaitu Pendapatan Tahunan, Nilai Pelanggan, dan Tingkat Churn (%), memiliki nilai p-value yang jauh lebih kecil dari 0,05. Dengan demikian, hipotesis nol (H₀) yang menyatakan bahwa data berdistribusi normal ditolak untuk seluruh variabel.
+Hasil ini menunjukkan bahwa distribusi data pada ketiga variabel tersebut tidak mengikuti distribusi normal. Temuan ini sejalan dengan analisis visual sebelumnya (histogram dan boxplot) yang memperlihatkan adanya kemiringan distribusi (skewness) serta variasi data yang cukup besar.
+Oleh karena itu, untuk menganalisis hubungan antar variabel, digunakan metode non-parametrik, yaitu korelasi Spearman, karena metode ini tidak mensyaratkan asumsi normalitas data dan lebih sesuai untuk data yang berskala ordinal atau memiliki distribusi tidak normal.
+
 - **Plot Q-Q:**
   - ![Q–Q Plot Pendapatan Tahunan](results/qqplot_Pendapatan_Tahunan_Miliar_IDR.png)
   - *Interpretasi:*
@@ -118,6 +122,7 @@ Koefisien korelasi (ρ): 0.706
 p-value: < 0.05
   - **Interpretasi:**
 Berdasarkan hasil analisis korelasi menggunakan **metode Spearman**, diperoleh nilai koefisien korelasi (ρ) sebesar 0,706 dengan nilai p-value < 0,05. Hasil ini menunjukkan bahwa terdapat hubungan yang positif dan kuat antara Pendapatan Tahunan dan Nilai Pelanggan. Artinya, peningkatan pendapatan tahunan cenderung diikuti oleh peningkatan nilai pelanggan. Hubungan tersebut bersifat signifikan secara statistik, sehingga dapat disimpulkan bahwa pendapatan tahunan memiliki keterkaitan yang bermakna dengan nilai pelanggan dalam data yang dianalisis.
+
 - **Visualisasi (Scatter Plot):**
   - ![Scatter Plot Pendapatan Tahunan vs Nilai Pelanggan](results/scatterplot_Pendapatan_Tahunan_Miliar_IDR_vs_Nilai_Pelanggan_Juta_IDR.png)
   - **Interpretasi**:
