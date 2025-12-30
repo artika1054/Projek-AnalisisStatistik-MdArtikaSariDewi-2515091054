@@ -58,7 +58,7 @@ for (kolom in variabel_uji) {
   # -------------------------------------------------
   qq_plot <- ggplot(data_bersih, aes_string(sample = kolom)) +
     stat_qq() +
-    stat_qq_line(color = "red", linetype = "dashed") +
+    stat_qq_line(color = "blue", linetype = "dashed") +
     labs(
       title = "Q-Q Plot Uji Normalitas",
       subtitle = paste("Variabel:", kolom),
